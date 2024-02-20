@@ -28,7 +28,7 @@ module "public_subnets" {
   environment        = local.environment
   label_order        = local.label_order
   availability_zones = ["eu-west-1b", "eu-west-1c"]
-  vpc_id             = module.vpc.vpc_id
+  vpc_id             = module.vpc.id
   cidr_block         = module.vpc.vpc_cidr_block
   type               = "public"
   igw_id             = module.vpc.igw_id
@@ -47,7 +47,7 @@ module "spot-ec2" {
   ##======================================================================================
   ## Below A security group controls the traffic that is allowed to reach and leave the resources that it is associated with.
   ##======================================================================================
-  vpc_id            = module.vpc.vpc_id
+  vpc_id            = module.vpc.id
   ssh_allowed_ip    = ["0.0.0.0/0"]
   ssh_allowed_ports = [22]
 
