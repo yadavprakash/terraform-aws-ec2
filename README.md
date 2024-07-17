@@ -23,7 +23,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 ```hcl
 # Create EC2 instances
 module "ec2" {
-  source               = "git::https://github.com/opsstation/terraform-aws-ec2.git?ref=v1.0.0"
+  source               = "git::https://github.com/yadavprakash/terraform-aws-ec2.git?ref=v1.0.0"
   name                 = "ec2"
   environment          = local.environment
   vpc_id               = module.vpc.vpc_id
@@ -61,7 +61,7 @@ This example demonstrates how to create various AWS resources using the provided
 
 ```hcl
 module "spot-ec2" {
-  source      = "git::https://github.com/opsstation/terraform-aws-ec2.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-ec2.git?ref=v1.0.0"
   name        = "ec2"
   environment = "test"
 
@@ -107,14 +107,14 @@ module "spot-ec2" {
 ```
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-aws-ec2/tree/master/example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/yadavprakash/terraform-aws-ec2/tree/master/example) directory within this repository.
 
 ## License
-This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/opsstation/terraform-aws-ec2/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/yadavprakash/terraform-aws-ec2/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
-Replace **MIT** and **opsstation** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Replace **MIT** and **yadavprakash** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -136,7 +136,7 @@ Replace **MIT** and **opsstation** with the appropriate license and your informa
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -243,7 +243,7 @@ Replace **MIT** and **opsstation** with the appropriate license and your informa
 | <a name="input_private_ip"></a> [private\_ip](#input\_private\_ip) | Private IP address to associate with the instance in a VPC | `string` | `null` | no |
 | <a name="input_protocol"></a> [protocol](#input\_protocol) | The protocol. If not icmp, tcp, udp, or all use the. | `string` | `"tcp"` | no |
 | <a name="input_public_key"></a> [public\_key](#input\_public\_key) | Name  (e.g. `ssh-rsa AAAAB3NzaC1ycAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQ`). | `string` | `""` | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/opsstation/terraform-aws-ec2?ref=v1.0.0"` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/yadavprakash/terraform-aws-ec2?ref=v1.0.0"` | no |
 | <a name="input_root_block_device"></a> [root\_block\_device](#input\_root\_block\_device) | Customize details about the root block device of the instance. See Block Devices below for details. | `list(any)` | `[]` | no |
 | <a name="input_rsa_bits"></a> [rsa\_bits](#input\_rsa\_bits) | When algorithm is RSA, the size of the generated RSA key, in bits (default: 2048). | `number` | `4096` | no |
 | <a name="input_secondary_private_ips"></a> [secondary\_private\_ips](#input\_secondary\_private\_ips) | A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e. referenced in a `network_interface block` | `list(string)` | `null` | no |

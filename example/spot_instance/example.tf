@@ -11,7 +11,7 @@ locals {
 ## A VPC is a virtual network that closely resembles a traditional network that you'd operate in your own data center.
 ##=====================================================================================
 module "vpc" {
-  source      = "git::https://github.com/opsstation/terraform-aws-vpc?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-vpc?ref=v1.0.0"
   name        = "app"
   environment = local.environment
   label_order = local.label_order
@@ -23,7 +23,7 @@ module "vpc" {
 ## A subnet is a range of IP addresses in your VPC.
 ##========================================================================
 module "public_subnets" {
-  source             = "git::https://github.com/opsstation/terraform-aws-subnet?ref=v1.0.0"
+  source             = "git::https://github.com/yadavprakash/terraform-aws-subnet?ref=v1.0.0"
   name               = "public-subnet"
   environment        = local.environment
   label_order        = local.label_order
