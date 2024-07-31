@@ -23,7 +23,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 ```hcl
 # Create EC2 instances
 module "ec2" {
-  source               = "git::https://github.com/yadavprakash/terraform-aws-ec2.git?ref=v1.0.0"
+  source               = "git::https://github.com/yadavprakash/terraform-aws-ec2.git"
   name                 = "ec2"
   environment          = local.environment
   vpc_id               = module.vpc.vpc_id
@@ -61,7 +61,7 @@ This example demonstrates how to create various AWS resources using the provided
 
 ```hcl
 module "spot-ec2" {
-  source      = "git::https://github.com/yadavprakash/terraform-aws-ec2.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-ec2.git"
   name        = "ec2"
   environment = "test"
 
